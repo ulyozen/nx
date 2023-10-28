@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "nx-ang",
   "sourceRoot": "apps/frontend/admin/src",
-  "tags": ["scope:frontend-admin"],
+  "tags": ["scope:frontend-admin", "type:app"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -52,7 +52,8 @@
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
-        "port": 4201
+        "port": 4201,
+        "proxyConfig": "apps/frontend/admin/proxy.conf.json"
       },
       "configurations": {
         "production": {
